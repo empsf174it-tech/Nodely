@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services &amp; Starter Bundles | Nodely Smart Home Guide</title>
+  <meta name="description" content="Explore Nodely smart home buying guides, curated starter bundles, setup architectural blueprints, and protocol advisory services.">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/favicon.svg">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ==================== GLOBAL NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-brand" aria-label="Nodely Home">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>Nodely</span>
+      </a>
+
+      <!-- Desktop Nav (>1024px) -->
+      <nav class="nav-desktop" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">About</a>
+          </li>
+          <li class="nav-item has-dropdown">
+            <a href="services.html" class="nav-link dropdown-toggle active" aria-current="page" aria-haspopup="true" aria-expanded="false" id="services-nav-menu">
+              <span>Services</span>
+              <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="services-nav-menu">
+              <li class="dropdown-item"><a href="services.html#guides" class="dropdown-link">Buying Guides</a></li>
+              <li class="dropdown-item"><a href="services.html#comparisons" class="dropdown-link">Comparisons</a></li>
+              <li class="dropdown-item"><a href="services.html#setup" class="dropdown-link">Setup Help</a></li>
+              <li class="dropdown-item"><a href="services.html#bundles" class="dropdown-link">Starter Bundles</a></li>
+              <li class="dropdown-item"><a href="services.html#contact" class="dropdown-link">Contact</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="compare.html" class="nav-link">Compare</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Header Action -->
+      <div class="header-actions">
+        <a href="compare.html" class="btn btn-primary btn-sm">Launch Tool</a>
+        <!-- Hamburger Button (<=1024px) -->
+        <button type="button" class="nav-hamburger-btn" aria-label="Open mobile navigation drawer" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer (<=1024px) -->
+  <div class="drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation" aria-hidden="true">
+    <div class="drawer-header">
+      <div class="logo-brand">
+        <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+          <polyline points="2 17 12 22 22 17"></polyline>
+          <polyline points="2 12 12 17 22 12"></polyline>
+        </svg>
+        <span>Nodely</span>
+      </div>
+      <button type="button" class="drawer-close-btn" aria-label="Close navigation drawer">✕</button>
+    </div>
+
+    <ul class="drawer-nav-list">
+      <li><a href="index.html" class="drawer-nav-link">Home</a></li>
+      <li><a href="about.html" class="drawer-nav-link">About</a></li>
+      <li>
+        <a href="services.html" class="drawer-nav-link drawer-accordion-toggle active" aria-expanded="true">
+          <span>Services</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </a>
+        <ul class="drawer-accordion-menu is-open">
+          <li><a href="services.html#guides" class="drawer-sublink">Buying Guides</a></li>
+          <li><a href="services.html#comparisons" class="drawer-sublink">Comparisons</a></li>
+          <li><a href="services.html#setup" class="drawer-sublink">Setup Help</a></li>
+          <li><a href="services.html#bundles" class="drawer-sublink">Starter Bundles</a></li>
+          <li><a href="services.html#contact" class="drawer-sublink">Contact</a></li>
+        </ul>
+      </li>
+      <li><a href="compare.html" class="drawer-nav-link">Compare</a></li>
+    </ul>
+
+    <div style="margin-top: auto; padding-top: 16px;">
+      <a href="compare.html" class="btn btn-primary btn-block">Compare Devices</a>
+    </div>
+  </aside>
+
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main-content" class="site-main">
+
+    <!-- 1. BUYING GUIDES SECTION (#guides) -->
+    <section id="guides" class="page-section" aria-labelledby="guides-heading">
+      <div class="container">
+        <div class="page-header-center">
+          <span class="section-pill-tag">Hardware Blueprints</span>
+          <h1 id="guides-heading">Smart Home Buying Guides &amp; Services</h1>
+          <p>
+            Whether planning a greenfield home build or modernizing a legacy apartment, our architectural guides help you choose the ideal wireless protocol and device topology.
+          </p>
+        </div>
+
+        <div class="card-grid-3 reveal-on-scroll">
+          <div class="service-card">
+            <div class="category-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <h3>Matter &amp; Thread Migration Guide</h3>
+            <p>A step-by-step migration blueprint for phasing out proprietary Zigbee and Z-Wave hubs in favor of open Matter 1.3 clusters and self-healing Thread mesh routing.</p>
+            <div style="margin-top: auto; padding-top: 12px;">
+              <a href="compare.html" class="btn btn-secondary btn-sm btn-block">Compare Thread Devices &rarr;</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="category-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            </div>
+            <h3>Zero-Cloud Local Privacy Guide</h3>
+            <p>How to architect security cameras, door locks, and environmental sensors with local RTSP streaming, on-device AI recognition, and zero monthly subscription fees.</p>
+            <div style="margin-top: auto; padding-top: 12px;">
+              <a href="compare.html?category=cameras" class="btn btn-secondary btn-sm btn-block">View Local Cameras &rarr;</a>
+            </div>
+          </div>
+
+          <div class="service-card">
+            <div class="category-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path></svg>
+            </div>
+            <h3>HVAC &amp; Smart Climate Savings Guide</h3>
+            <p>Maximize annual energy efficiency by combining millimeter-wave radar occupancy telemetry, multi-room remote sensors, and dynamic heat pump schedule balancing.</p>
+            <div style="margin-top: auto; padding-top: 12px;">
+              <a href="compare.html?category=thermostats" class="btn btn-secondary btn-sm btn-block">Explore Thermostats &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SIDE-BY-SIDE COMPARISONS OVERVIEW (#comparisons) -->
+    <section id="comparisons" class="page-section page-section-alt" aria-labelledby="comp-service-heading">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-pill-tag">Side-by-Side Engine</span>
+          <h2 id="comp-service-heading">Standardized Multi-Device Comparisons</h2>
+          <p class="section-subtext">Eliminate speculation by aligning physical specs, radio protocols, and verified owner feedback directly side-by-side.</p>
+        </header>
+
+        <div style="background: var(--color-secondary); border: 1px solid var(--border-card); border-radius: var(--radius); padding: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;" class="reveal-on-scroll">
+          <div>
+            <h3 style="font-size: 1.5rem; margin-bottom: 16px;">What Our Comparison Tool Provides:</h3>
+            <ul style="list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 0.94rem; color: var(--text-muted); margin-bottom: 24px;">
+              <li style="display: flex; gap: 10px;"><span style="color: var(--color-accent); font-weight: bold;">✓</span> <strong>2 to 4 Device Multi-Column View:</strong> Pin multiple smart speakers, locks, or cameras simultaneously.</li>
+              <li style="display: flex; gap: 10px;"><span style="color: var(--color-accent); font-weight: bold;">✓</span> <strong>Differences Only Toggle:</strong> Instantly hide identical attributes to focus purely on hardware divergence.</li>
+              <li style="display: flex; gap: 10px;"><span style="color: var(--color-accent); font-weight: bold;">✓</span> <strong>Category-Grouped Pros &amp; Cons:</strong> Deep dive into setup friction, RF range, privacy, app reliability, and value.</li>
+              <li style="display: flex; gap: 10px;"><span style="color: var(--color-accent); font-weight: bold;">✓</span> <strong>Dual Score Display:</strong> Contrast empirical lab scores (/10) with verified domestic purchaser feedback (/5).</li>
+            </ul>
+            <a href="compare.html" class="btn btn-primary">Open Live Comparison Matrix</a>
+          </div>
+
+          <div>
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Hardware circuit and testing diagnostics display" style="border-radius: var(--radius); border: 1px solid var(--border-subtle); width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SETUP HELP & COMMISSIONING ARCHITECTURE (#setup) -->
+    <section id="setup" class="page-section" aria-labelledby="setup-heading">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-pill-tag">Commissioning Guidance</span>
+          <h2 id="setup-heading">Smart Home Setup &amp; Troubleshooting Help</h2>
+          <p class="section-subtext">Avoid common pitfalls during Matter pairing, IPv6 Thread border routing, and multi-assistant synchronizations.</p>
+        </header>
+
+        <div class="card-grid-3 reveal-on-scroll">
+          <div class="step-card">
+            <div class="category-icon-circle">
+              <span style="font-family: var(--font-mono); font-weight: 600; font-size: 1.1rem;">01</span>
+            </div>
+            <h3>Thread Border Router Audit</h3>
+            <p>Ensure your home network has at least one active Thread Border Router (e.g., HomePod 2nd Gen, Nest Hub 2nd Gen, or Echo 4th Gen) positioned within 30 feet of sub-mesh nodes.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="category-icon-circle">
+              <span style="font-family: var(--font-mono); font-weight: 600; font-size: 1.1rem;">02</span>
+            </div>
+            <h3>IPv6 &amp; mDNS Multicast Verification</h3>
+            <p>Confirm that your home router has IPv6 enabled and mDNS / IGMP snooping turned on. Matter relies on local multicast discovery to route device commands without cloud servers.</p>
+          </div>
+
+          <div class="step-card">
+            <div class="category-icon-circle">
+              <span style="font-family: var(--font-mono); font-weight: 600; font-size: 1.1rem;">03</span>
+            </div>
+            <h3>Multi-Admin Sharing Flow</h3>
+            <p>Pair first to your primary platform via QR code, then open the device settings in that app to generate a temporary 11-digit Matter pairing code for your second assistant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SMART HOME STARTER BUNDLES (#bundles) -->
+    <section id="bundles" class="page-section page-section-alt" aria-labelledby="bundles-heading">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-pill-tag">Curated Hardware Sets</span>
+          <h2 id="bundles-heading">Smart-Home Starter Bundles</h2>
+          <p class="section-subtext">Pre-vetted equipment combinations that are 100% interoperable out-of-the-box, saving hours of configuration headaches.</p>
+        </header>
+
+        <div class="card-grid-3 reveal-on-scroll">
+          <!-- Bundle 1 -->
+          <div class="bundle-card">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Apartment interior with cozy lighting" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius); margin-bottom: 16px;">
+            <span class="badge-cat" style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">Apartment &amp; Renter Tier</span>
+            <h3 style="font-size: 1.35rem; margin: 4px 0 8px;">The Urban Essential Suite</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Zero-drill, rental-friendly setup covering audio, indoor pan/tilt surveillance, and multi-color lighting.</p>
+            
+            <div class="bundle-price-badge">
+              <span class="bundle-price tabular">$299</span>
+              <span class="bundle-regular tabular">$347</span>
+              <span style="font-size: 0.78rem; color: var(--color-success); font-weight: 600;">Save $48</span>
+            </div>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--color-accent); font-family: var(--font-mono); margin-bottom: 8px;">Included Hardware:</h4>
+            <ul class="bundle-devices-list">
+              <li>Vocalis EchoSphere 3 Smart Speaker</li>
+              <li>OmniLens MicroCam HD Pan/Tilt</li>
+              <li>NovaGlow Mesh Bulb Kit (4-Pack)</li>
+            </ul>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 8px;">Key Advantages:</h4>
+            <ul class="bundle-features-list">
+              <li>Works with Alexa &amp; Google Home</li>
+              <li>Direct Wi-Fi — zero bridge required</li>
+              <li>Completed setup in under 20 minutes</li>
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 16px;">
+              <!-- AFFILIATE_LINK -->
+              <a href="compare.html?bundle=starter-apartment" 
+                 class="btn btn-primary btn-block btn-check-price" 
+                 data-affiliate-id="starter-apartment" 
+                 data-product="bundle-urban" 
+                 data-placement="services_bundle" 
+                 rel="sponsored noopener">
+                Explore Bundle Specs
+              </a>
+              <div class="affiliate-disclosure-micro">Simulated bundle configuration</div>
+            </div>
+          </div>
+
+          <!-- Bundle 2 (Featured) -->
+          <div class="bundle-card" style="border-color: var(--color-accent); box-shadow: 0 0 30px rgba(139, 152, 255, 0.15);">
+            <div style="position: absolute; top: 12px; right: 12px; z-index: 2;">
+              <span class="badge-highlight badge-overall">Most Popular</span>
+            </div>
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Modern family living room with architectural lighting" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius); margin-bottom: 16px;">
+            <span class="badge-cat" style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">Matter 1.3 Certified Tier</span>
+            <h3 style="font-size: 1.35rem; margin: 4px 0 8px;">The Matter-First Ecosystem</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Flagship single-family smart home setup delivering low latency Thread mesh and multi-admin cross-compatibility.</p>
+            
+            <div class="bundle-price-badge">
+              <span class="bundle-price tabular">$749</span>
+              <span class="bundle-regular tabular">$836</span>
+              <span style="font-size: 0.78rem; color: var(--color-success); font-weight: 600;">Save $87</span>
+            </div>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--color-accent); font-family: var(--font-mono); margin-bottom: 8px;">Included Hardware:</h4>
+            <ul class="bundle-devices-list">
+              <li>Aetheris PureAudio Pro (Thread Border Router)</li>
+              <li>ThermaSync Halo IQ Thermostat + 3 Sensors</li>
+              <li>LumenGrid Prism Aurora Kit (3 Bulbs, CRI 96)</li>
+            </ul>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 8px;">Key Advantages:</h4>
+            <ul class="bundle-features-list">
+              <li>High-speed Thread mesh (&lt;15ms response)</li>
+              <li>Matter 1.3 multi-admin across Apple, Alexa &amp; Google</li>
+              <li>Audited 20%+ HVAC heating &amp; cooling savings</li>
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 16px;">
+              <!-- AFFILIATE_LINK -->
+              <a href="compare.html?bundle=starter-family" 
+                 class="btn btn-primary btn-block btn-check-price" 
+                 data-affiliate-id="starter-family" 
+                 data-product="bundle-matter" 
+                 data-placement="services_bundle" 
+                 rel="sponsored noopener">
+                Explore Bundle Specs
+              </a>
+              <div class="affiliate-disclosure-micro">Simulated bundle configuration</div>
+            </div>
+          </div>
+
+          <!-- Bundle 3 -->
+          <div class="bundle-card">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Exterior modern smart security facade" style="width: 100%; aspect-ratio: 16/9; object-fit: cover; border-radius: var(--radius); margin-bottom: 16px;">
+            <span class="badge-cat" style="color: var(--color-accent); font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase;">Perimeter &amp; Privacy Tier</span>
+            <h3 style="font-size: 1.35rem; margin: 4px 0 8px;">The Local Fortress Perimeter</h3>
+            <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Zero recurring subscriptions. Commercial-grade physical deadbolt defense combined with local 4K surveillance.</p>
+            
+            <div class="bundle-price-badge">
+              <span class="bundle-price tabular">$469</span>
+              <span class="bundle-regular tabular">$498</span>
+              <span style="font-size: 0.78rem; color: var(--color-success); font-weight: 600;">Save $29</span>
+            </div>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--color-accent); font-family: var(--font-mono); margin-bottom: 8px;">Included Hardware:</h4>
+            <ul class="bundle-devices-list">
+              <li>SentryPoint 4K Guard Cam with Shutter &amp; RTSP</li>
+              <li>FortisVault SecureBolt Pro Biometric Deadbolt</li>
+            </ul>
+
+            <h4 style="font-size: 0.88rem; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono); margin-bottom: 8px;">Key Advantages:</h4>
+            <ul class="bundle-features-list">
+              <li>ANSI/BHMA Grade 1 maximum physical door lock strength</li>
+              <li>True 4K HDR footage stored locally on your own NAS</li>
+              <li>Apple Home Key NFC and 0.28s biometric fingerprint access</li>
+            </ul>
+
+            <div style="margin-top: auto; padding-top: 16px;">
+              <!-- AFFILIATE_LINK -->
+              <a href="compare.html?bundle=starter-security" 
+                 class="btn btn-primary btn-block btn-check-price" 
+                 data-affiliate-id="starter-security" 
+                 data-product="bundle-security" 
+                 data-placement="services_bundle" 
+                 rel="sponsored noopener">
+                Explore Bundle Specs
+              </a>
+              <div class="affiliate-disclosure-micro">Simulated bundle configuration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SERVICES FAQ SECTION -->
+    <section class="page-section" aria-labelledby="services-faq-heading">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-pill-tag">Advisory Answers</span>
+          <h2 id="services-faq-heading">Services &amp; Bundles FAQ</h2>
+          <p class="section-subtext">Clear answers regarding compatibility guarantees, return periods, and custom hardware consultations.</p>
+        </header>
+
+        <div class="faq-grid reveal-on-scroll">
+          <details class="faq-item">
+            <summary class="faq-summary"><h3 class="faq-q">Can I mix and match products from different bundles?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-a">Yes. Every device featured across our bundles adheres to standardized Matter, Wi-Fi, or Thread protocols, allowing you to swap items cleanly using our comparison matrix.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary"><h3 class="faq-q">Do you charge for setup advisory assistance?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-a">Our published buying guides, setup checklists, and comparison tools are 100% free for consumers. We are supported entirely through optional affiliate retail links and lab grants.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary"><h3 class="faq-q">How do I verify if my existing Wi-Fi router is sufficient?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-a">Smart homes with over 20 devices operate best with Wi-Fi 6 or tri-band routers with dedicated 2.4GHz bands. If routing over Thread, Wi-Fi congestion is bypassed entirely.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary class="faq-summary"><h3 class="faq-q">Can hardware manufacturers submit devices for benchmarking?</h3><span class="faq-icon" aria-hidden="true"></span></summary>
+            <p class="faq-a">Yes. Manufacturers may submit retail-packaged production hardware via our contact form below. All testing follows our standardized 10-point methodology with zero editorial influence.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT FORM SECTION (#contact) (Step 8.3 & Step 11: Full client-side validation) -->
+    <section id="contact" class="page-section page-section-alt" aria-labelledby="contact-heading">
+      <div class="container">
+        <header class="section-header reveal-on-scroll">
+          <span class="section-pill-tag">Hardware Advisory &amp; Lab Submissions</span>
+          <h2 id="contact-heading">Contact the Nodely Engineering Team</h2>
+          <p class="section-subtext">Have an inquiry regarding Thread mesh performance, hardware compatibility, or lab testing submission? Send us your technical query.</p>
+        </header>
+
+        <div style="max-width: 760px; margin: 0 auto; background: var(--color-secondary); border: 1px solid var(--border-card); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow);" class="reveal-on-scroll">
+          
+          <!-- Netlify / Formspree action attribute placeholder (Step 14) -->
+          <form id="services-contact-form" action="https://formspree.io/f/placeholder-nodely-test" method="POST" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name <span class="required-star">*</span></label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="Alex Mercer" required>
+                <span class="field-error-msg" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address <span class="required-star">*</span></label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="alex@mercer-home.example" required>
+                <span class="field-error-msg" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-subject" class="form-label">Inquiry Topic <span class="required-star">*</span></label>
+              <select id="contact-subject" name="subject" class="select-input" required>
+                <option value="">Select an inquiry category...</option>
+                <option value="compatibility">Hardware Compatibility &amp; Matter Assistance</option>
+                <option value="bundle-advice">Custom Starter Bundle Guidance</option>
+                <option value="lab-submission">Manufacturer Hardware Submission for Testing</option>
+                <option value="editorial-correction">Testing Data Correction or Protocol Query</option>
+                <option value="general">General Smart Home Question</option>
+              </select>
+              <span class="field-error-msg" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Technical Query / Details <span class="required-star">*</span></label>
+              <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Please detail your specific home setup, router hardware, and devices in question (minimum 15 characters)..." required></textarea>
+              <span class="field-error-msg" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label class="terms-checkbox-wrap" for="contact-terms">
+                <input type="checkbox" id="contact-terms" name="terms" required>
+                <span class="custom-check-marker"></span>
+                <span>I understand that Nodely is a demonstration benchmark platform and agree to the privacy policy regarding test inquiry communications. <span class="required-star">*</span></span>
+              </label>
+              <span class="field-error-msg" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Advisory Enquiry
+            </button>
+
+            <div id="contact-form-status" aria-live="polite"></div>
+          </form>
+
+        </div>
+
+        <div class="contact-info-grid reveal-on-scroll">
+          <div class="contact-info-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 4h16v16H4z" opacity="0"/><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <h3 class="contact-info-title">Email</h3>
+            <a href="mailto:lab@nodely-guide.example">lab@nodely-guide.example</a>
+            <p>Replies within 1 business day</p>
+          </div>
+          <div class="contact-info-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <h3 class="contact-info-title">Phone</h3>
+            <a href="tel:+14155550142">+1 (415) 555-0142</a>
+            <p>Mon–Fri, 9:00–18:00 PT</p>
+          </div>
+          <div class="contact-info-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <h3 class="contact-info-title">Test Lab</h3>
+            <span>500 Howard St, Suite 300<br>San Francisco, CA 94105</span>
+            <p>Visits by appointment</p>
+          </div>
+          <div class="contact-info-card">
+            <span class="contact-icon"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+            <h3 class="contact-info-title">Follow the Lab</h3>
+            <div class="contact-social" aria-label="Nodely on social media">
+            <a href="#" class="social-link" aria-label="Nodely on X" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on YouTube" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on Instagram" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on GitHub" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+            <p>Firmware alerts &amp; test logs</p>
+          </div>
+        </div>
+
+        <div class="contact-map reveal-on-scroll">
+          <iframe title="Map showing the Nodely test lab location in San Francisco" src="https://www.openstreetmap.org/export/embed.html?bbox=-122.4055%2C37.7838%2C-122.3895%2C37.7938&amp;layer=mapnik&amp;marker=37.7888%2C-122.3975" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a class="contact-map-link" href="https://www.openstreetmap.org/?mlat=37.7888&amp;mlon=-122.3975#map=16/37.7888/-122.3975" target="_blank" rel="noopener">Open in maps ↗</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand-col">
+          <div class="logo-brand">
+            <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Nodely</span>
+          </div>
+          <p class="footer-desc">
+            The independent benchmark portal for smart home hardware, Matter interoperability, and privacy-first automation.
+          </p>
+          <div class="verified-timestamp">
+            <span>Lab Benchmark Release: October 2026</span>
+          </div>
+          <div class="footer-social" aria-label="Nodely on social media">
+            <a href="#" class="social-link" aria-label="Nodely on X" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on YouTube" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.3 31.3 0 0 0 0 12a31.3 31.3 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.3 31.3 0 0 0 24 12a31.3 31.3 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on Instagram" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1.1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 4.6a5.2 5.2 0 1 0 0 10.4 5.2 5.2 0 0 0 0-10.4zm0 8.6a3.4 3.4 0 1 1 0-6.8 3.4 3.4 0 0 1 0 6.8zm5.4-9.9a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on LinkedIn" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+            <a href="#" class="social-link" aria-label="Nodely on GitHub" rel="noopener"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.6 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1.1.9 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About &amp; Lab</a></li>
+            <li><a href="services.html">Services &amp; Bundles</a></li>
+            <li><a href="compare.html">Comparison Matrix</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="compare.html?category=speakers">Smart Speakers</a></li>
+            <li><a href="compare.html?category=cameras">Security Cameras</a></li>
+            <li><a href="compare.html?category=thermostats">Smart Thermostats</a></li>
+            <li><a href="compare.html?category=lighting">Smart Lighting</a></li>
+            <li><a href="compare.html?category=locks">Smart Locks</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Standards</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html#methodology">How We Score (/10)</a></li>
+            <li><a href="about.html#independence">Independence Statement</a></li>
+            <li><a href="services.html#contact">Submit Hardware for Test</a></li>
+            <li><a href="compare.html#checker">Compatibility Checker</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Mandatory Disclosure Line (Step 9) -->
+      <div class="footer-disclosure-box">
+        <p class="footer-disclosure-text">
+          Some links may be affiliate links. Reviews are independent. Nodely is a demo brand; all products, prices, scores, and reviews are placeholder data.
+        </p>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Nodely Labs. Built for Consumer Hardware Transparency. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/affiliate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
