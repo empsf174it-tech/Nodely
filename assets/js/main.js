@@ -456,7 +456,7 @@
         return `
           <div class="review-item-card home-featured-review">
             <header class="review-item-header">
-              <div class="reviewer-avatar" aria-hidden="true"><img src="https://api.dicebear.com/9.x/notionists/svg?seed=${encodeURIComponent(rev.author)}&backgroundColor=c7ceff,d9c8ff,b9e3ff&radius=50" alt="" loading="lazy"></div>
+              <div class="reviewer-avatar" aria-hidden="true"><img src="${rev.avatar || `https://api.dicebear.com/9.x/notionists/svg?seed=${encodeURIComponent(rev.author)}`}" alt="" loading="lazy"></div>
               <div class="reviewer-meta">
                 <div class="reviewer-name-row">
                   <strong class="reviewer-name">${rev.author}</strong>
@@ -490,5 +490,22 @@
       card.style.setProperty('--mx', `${e.clientX - r.left}px`);
       card.style.setProperty('--my', `${e.clientY - r.top}px`);
     });
+  });
+})();
+
+// Back-to-top button (all pages)
+(function () {
+  const btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>';
+  document.body.appendChild(btn);
+  const toggle = () => btn.classList.toggle('is-visible', window.scrollY > 500);
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', () => {
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
   });
 })();

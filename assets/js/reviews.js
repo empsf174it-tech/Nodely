@@ -111,7 +111,7 @@
       return reviews.map(rev => `
         <article class="review-item-card">
           <header class="review-item-header">
-            <div class="reviewer-avatar" aria-hidden="true"><img src="https://api.dicebear.com/9.x/notionists/svg?seed=${encodeURIComponent(rev.author)}&backgroundColor=c7ceff,d9c8ff,b9e3ff&radius=50" alt="" loading="lazy"></div>
+            <div class="reviewer-avatar" aria-hidden="true"><img src="${rev.avatar || `https://api.dicebear.com/9.x/notionists/svg?seed=${encodeURIComponent(rev.author)}`}" alt="" loading="lazy"></div>
             <div class="reviewer-meta">
               <div class="reviewer-name-row">
                 <strong class="reviewer-name">${rev.author}</strong>
